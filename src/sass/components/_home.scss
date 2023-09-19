@@ -1,0 +1,17 @@
+
+
+.homeContainer {
+  width: 89.33%;
+  display: inline-flex;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+
+  & .cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+}

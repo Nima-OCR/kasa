@@ -1,49 +1,8 @@
 
 import React from 'react';
-import styled from 'styled-components';
 import jsonData from '../../data/data.json';
-import colors from "../../utils/style/colors";
 import { Link } from 'react-router-dom';
-
-
-const CardContainer = styled.div`
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: 20px;
-`;
-
-const CardImage = styled.img`
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-`;
-
-
-
-
-const Card = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-
-  border-radius: 10px;
-  
-  p {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    color: ${colors.light};
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%;
-    margin: 0;
-  }
-`;
-
+import '../../sass/main.scss';
 
 const CardList = () => {
     const filteredData = jsonData.map(item => ({
@@ -53,18 +12,17 @@ const CardList = () => {
     }));
 
     return (
-        <CardContainer>
+        <div className="CardContainer">
             {filteredData.map((logement, index) => (
-                <Card key={index}>
+                <div key={index} className="Card">
                     <Link to={`/logement/${logement.id}`}>
-                        <CardImage src={logement.cover} alt={logement.title} />
+                        <img src={logement.cover} alt={logement.title} className="CardImage" />
                         <p>{logement.title}</p>
                     </Link>
-                </Card>
+                </div>
             ))}
-        </CardContainer>
+        </div>
     );
 };
-
 
 export default CardList;

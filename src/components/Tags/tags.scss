@@ -1,0 +1,27 @@
+@import '../../sass/base/variables';
+
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+
+  &__tagText {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary-color;
+    border-radius: 10px;
+    padding: 5px;
+
+    .tag-text {
+      color: $white-color;
+      text-align: center;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+}

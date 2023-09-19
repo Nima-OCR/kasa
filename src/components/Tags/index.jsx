@@ -1,11 +1,22 @@
 
 
-const Index = ({ tags }) => (
-    <div className="tags">
-        {tags.map((tag, index) => (
-            <span key={index}>{tag}</span>
-        ))}
-    </div>
-);
+import React from 'react';
 
-export default Index
+function TagsList({ tags }) {
+    return (
+        <div className="tags">
+            {tags.map((tag, index) => (
+                <div className="tags__tagText" key={index}>
+                    <span className="tag-text">
+                        {tag}
+                    </span>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+
+export default TagsList;
+
+

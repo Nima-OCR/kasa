@@ -5,12 +5,12 @@ import {useParams} from "react-router-dom";
 import TitleLocation from "../../components/TitleLocation";
 import * as PropTypes from "prop-types";
 import RatingHost from "../../components/RatingHost";
+import TagsList from "../../components/Tags";
 
-function TagsList(props) {
-    return null;
-}
+
 
 TagsList.propTypes = {tags: PropTypes.any};
+
 const Logement = () => {
     const { idLogement } = useParams();
     const [logement, setLogement] = useState(null);
@@ -27,7 +27,7 @@ const Logement = () => {
     }
 
     return (
-        <div>
+        <div className="accommodations"> {/* Ajoutez la classe "accommodations" */}
             <Slideshow pictures={logement.pictures} />
             <div className="info-container">
                 <TitleLocation title={logement.title} location={logement.location} />

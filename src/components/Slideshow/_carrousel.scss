@@ -1,0 +1,36 @@
+.carrousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    background: none;
+    border: none;
+    z-index: 1;
+    fill: #FFFFFF;
+
+    &:first-child {
+      left: 1px;
+    }
+
+    &:last-child {
+      right: 1px;
+    }
+
+    svg {
+
+    }
+  }
+}
