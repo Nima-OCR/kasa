@@ -1,0 +1,41 @@
+#accommodations {
+    width: 100%;
+    height: 513px;
+}
+.carrousel-container {
+position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrousel-container img {
+    width: 89.33%;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carrousel-container button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    background: none;
+    border: none;
+    z-index: 1;
+    fill: #FFFFFF;
+}
+
+.carrousel-container button:first-child {
+    left: 20px;
+}
+
+.carrousel-container button:last-child {
+    right: 20px;
+
+}
+
+.carrousel-container svg {
+
+}

@@ -3,6 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import jsonData from '../../data/data.json';
 import colors from "../../utils/style/colors";
+import { Link } from 'react-router-dom';
+
 
 const CardContainer = styled.div`
   max-width: 100%;
@@ -28,7 +30,6 @@ const Card = styled.div`
   max-width: 100%;
 
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
   
   p {
     position: absolute;
@@ -43,8 +44,10 @@ const Card = styled.div`
   }
 `;
 
-function CardList() {
+
+const CardList = () => {
     const filteredData = jsonData.map(item => ({
+        id: item.id,
         cover: item.cover,
         title: item.title,
     }));
@@ -53,12 +56,15 @@ function CardList() {
         <CardContainer>
             {filteredData.map((logement, index) => (
                 <Card key={index}>
-                    <CardImage src={logement.cover} alt={logement.title} />
-                    <p>{logement.title}</p>
+                    <Link to={`/logement/${logement.id}`}>
+                        <CardImage src={logement.cover} alt={logement.title} />
+                        <p>{logement.title}</p>
+                    </Link>
                 </Card>
             ))}
         </CardContainer>
     );
-}
+};
+
 
 export default CardList;

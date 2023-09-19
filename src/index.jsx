@@ -8,12 +8,14 @@ import Header from './components/Header';
 import About from './pages/About';
 import Footer from "./components/Footer";
 import Page404 from "./pages/404/Page404";
+import Logement from "./pages/Accommodations";
 
 const AppRoutes = () => (
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="/logement/:idLogement" element={<Logement />} />
     </Routes>
 );
 

@@ -24,6 +24,24 @@ const StyledGlobalStyle = createGlobalStyle`
       justify-content: center;
       flex-wrap: wrap;
     }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      
+      & svg {
+        fill: #FFFFFF;
+        //background-color: #FF6060;
+        
+      }
+    }
+    
+    
+
+    
 `
 
 function GlobalStyle() {
