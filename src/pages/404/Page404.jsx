@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../sass/components/_404.scss';
+import './_404.scss';
 import {NavLink} from "react-router-dom";
 
 const Page404 = () => {

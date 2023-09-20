@@ -1,3 +1,6 @@
+@import '../../sass/base/variables';
+
+
 .carrousel-container {
   position: relative;
   display: flex;
@@ -19,7 +22,7 @@
     background: none;
     border: none;
     z-index: 1;
-    fill: #FFFFFF;
+    fill: $white-color;
 
     &:first-child {
       left: 1px;
@@ -32,5 +35,23 @@
     svg {
 
     }
+  }
+
+  .slide-counter {
+    display: flex;
+    position: absolute;
+    bottom: 19px;
+    width: 24px;
+    height: 32.402px;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+
+    color: $white-color;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
   }
 }

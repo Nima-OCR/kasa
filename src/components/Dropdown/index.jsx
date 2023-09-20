@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../sass/components/_dropdown.scss';
+import './_dropdown.scss';
 
 const DropdownComponent = ({ buttonName, text }) => {
     const [isVisible, setIsVisible] = useState(false);

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../sass/components/_hero-section.scss';
+import './_hero-section.scss';
 
 
 const HeroSection = ({ heroText, imgSrc }) => (

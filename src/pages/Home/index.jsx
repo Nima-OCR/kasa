@@ -1,7 +1,7 @@
 import HeroSection from "../../components/HeroSection";
 import CardList from "../../components/Card";
 import imgSrc from '../../assets/img.png';
-import '../../sass/components/_home.scss';
+import './_home.scss';
 
 const Home = () => {
     return (

@@ -1,16 +1,11 @@
 // main.scss
 @import '../components/Tags/tags';
-
 @import 'base/variables';
 @import 'base/typography';
-//@import 'layout/grid';
-//@import 'layout/header';
 @import 'components/buttons';
-@import 'components/cards';
-@import 'components/home';
-@import 'components/hero-section';
-@import 'components/404';
-@import 'components/dropdown';
-@import 'components/accommodations';
-
-//@import 'utilities/spacing';
+@import '../components/Card/cards';
+@import '../pages/Home/home';
+@import '../components/HeroSection/hero-section';
+@import '../pages/404/404';
+@import '../components/Dropdown/dropdown';
+@import '../pages/Accommodations/accommodations';
