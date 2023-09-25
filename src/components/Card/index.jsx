@@ -13,16 +13,19 @@ const CardList = () => {
 
     return (
         <div className="CardContainer">
-            {filteredData.map((logement, index) => (
-                <div key={index} className="Card">
-                    <Link to={`/logement/${logement.id}`}>
-                        <img src={logement.cover} alt={logement.title} className="CardImage" />
-                        <p>{logement.title}</p>
-                    </Link>
-                </div>
-            ))}
+            {
+                filteredData.map((logement, index) => (
+                    <div key={index} className="Card">
+                        <Link to={`/logement/${logement.id}`}>
+                            <img src={logement.cover} alt={logement.title} className="CardImage" />
+                            <p>{logement.title}</p>
+                        </Link>
+                    </div>
+                ))
+            }
         </div>
     );
+
 };
 
 export default CardList;

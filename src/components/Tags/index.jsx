@@ -18,5 +18,3 @@ function TagsList({ tags }) {
 
 
 export default TagsList;
-
-

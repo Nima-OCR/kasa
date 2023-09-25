@@ -3,12 +3,10 @@ import '../RatingHost/_ratingHost.scss';
 
 const generateStars = (rating) => {
     const maxRating = 5;
-    const filledStars = Math.round(rating);
-
     const stars = [];
 
     for (let i = 0; i < maxRating; i++) {
-        const starColor = i < filledStars ? "#FF6060" : "#E3E3E3";
+        const starColor = i < rating ? "#FF6060" : "#E3E3E3";
         stars.push(
             <svg
                 key={i}
@@ -36,8 +34,7 @@ const generateStars = (rating) => {
 const RatingHost = ({ rating, host }) => (
     <div className="rating-host">
         <div className="rating">
-            {generateStars(rating)}
-            {rating}
+            {generateStars(parseInt(rating))}
         </div>
         <div className="host">
             <img src={host.picture} alt={host.name} />
@@ -47,4 +44,3 @@ const RatingHost = ({ rating, host }) => (
 );
 
 export default RatingHost;
-

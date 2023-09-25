@@ -11,6 +11,14 @@
     align-items: flex-start;
   }
 
+  &__details {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
   &__button-container {
     display: flex;
     width: 100%;
@@ -39,10 +47,16 @@
   }
 
   &__text-content-frame {
+    color: $primary-color;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+
     display: none;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     border-radius: 0 0 5px 5px;
     text-align: justify;
     background: $secondary-color;
@@ -50,6 +64,12 @@
 
     &.is-visible {
       display: block;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
     }
   }
 

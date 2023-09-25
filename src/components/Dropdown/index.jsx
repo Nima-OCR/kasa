@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './_dropdown.scss';
 
-const DropdownComponent = ({ buttonName, text }) => {
+const DropdownComponent = ({ buttonName, text, listItems }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
@@ -29,7 +29,14 @@ const DropdownComponent = ({ buttonName, text }) => {
                 </div>
 
                 <div className={`dropdown__text-content-frame ${isVisible ? 'is-visible' : ''}`}>
-                    <p className="dropdown__text-content">{text}</p>
+                    {text && <p className="dropdown__text-content">{text}</p>}
+                    {listItems && (
+                        <ul>
+                            {listItems.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
 
             </div>
@@ -38,4 +45,3 @@ const DropdownComponent = ({ buttonName, text }) => {
 };
 
 export default DropdownComponent;
-

@@ -16,7 +16,6 @@ const Slideshow = ({ pictures }) => {
         );
     };
 
-    // Vérifiez s'il y a plus d'une image avant de rendre les flèches et la numérotation.
     const shouldRenderArrowsAndCounter = pictures.length > 1;
 
     return (

@@ -10,4 +10,3 @@ const HeroSection = ({ heroText, imgSrc }) => (
 );
 
 export default HeroSection;
-
